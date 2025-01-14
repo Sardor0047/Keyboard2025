@@ -9,18 +9,35 @@ def get_id():
     return respond['result'][-1]['message']['chat']['id']
 
 def send_message(text,chat_id):
-    keyboard_button = {
-        'text':'Button'
+    Button1 = {
+        'text':'👭 Play With Friends'
     }
-    keyboard_Home = {
-        'text' : 'HOME'
+    Button2 = {
+        'text' : '🕐 Last Played Games'
+    }
+
+    Button3 = {
+        'text' : '😃 join GAMEE Token channel'
+    }
+
+    Button4 = {
+        'text' : '😃 Trending game'
+    }
+
+    Button5 ={
+        'text' : '😃 categories'
+    }
+
+    Button6 = {
+        'text' : '😃 Get app & Win chash'
     }
     
 
     ReplyKeyboardMarkup = {
         'keyboard' : [
-            [keyboard_button,keyboard_button],
-            [keyboard_Home]
+            [Button1,Button2],
+            [Button3,Button4],
+            [Button5,Button6]
         ]
     }
     respond = requests.get(base_url + 'sendMessage',json={
